@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 
-export class Users extends Component {
+export class Users extends React.Component {
 
   render() {
     const users = this.props.users.map((user, index)=>{return <li key={index}>username: {user.username}, hometown: {user.hometown}</li>})

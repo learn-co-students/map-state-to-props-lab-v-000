@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { addUser } from '../actions/users';
 
-class UserInput extends Component {
+class UserInput extends React.Component {
 
   constructor(props) {
     super(props);
-    
+
     this.state = {
-      userName: '', 
+      userName: '',
       hometown: ''
     };
   }
@@ -26,25 +26,26 @@ class UserInput extends Component {
 
   handleOnSubmit(event) {
     event.preventDefault();
-    
+
     this.props.store.dispatch(addUser(this.state))
   }
 
   render() {
     return(
       <form onSubmit={(event) => this.handleOnSubmit(event)}>
-      <p>
-        <input 
-          type="text" 
-          onChange={(event) => this.handleOnUserNameChange(event)} 
-          placeholder="user name"/>
-      </p>
-      <p>
-        <input 
-          type="text" 
-          onChange={(event) => this.handleOnHometownChange(event)} 
-          placeholder="hometown"/>
-      </p>
+      <p> hello</p>
+        <p>
+          <input
+            type="text"
+            onChange={(event) => this.handleOnUserNameChange(event)}
+            placeholder="user name"/>
+        </p>
+        <p>
+          <input
+            type="text"
+            onChange={(event) => this.handleOnHometownChange(event)}
+            placeholder="hometown"/>
+        </p>
         <input type="submit" />
       </form>
     )
