@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
 import UserInput from './components/UserInput'
-
+import Users from './components/Users'
+import {connect} from 'react-redux';
 export class App extends Component {
   render() {
     return (
       <div className="App">
         <UserInput store={this.props.store}/>
-        {/* is there something we could connect to here? */}
+        <Users store={this.props.store}/>
       </div>
     );
   }
 }
 
-export default App;
+const mapStateToProps = (state) => { 
+  return { users: state.users };
+};
+ 
+export default connect(mapStateToProps)(App);
