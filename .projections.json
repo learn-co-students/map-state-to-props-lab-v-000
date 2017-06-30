@@ -1,0 +1,13 @@
+{
+  "src/reducers/*.js": {
+    "type": "reducer"
+  },
+  "src/components/*.js": {
+    "type": "component"
+  },
+  "src/actions/*.js": {
+    "type": "action"
+  }
+}
+
+
