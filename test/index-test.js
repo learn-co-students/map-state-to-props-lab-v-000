@@ -13,7 +13,7 @@ describe('store', () => {
   let store = configureStore();
 
   it('returns the initial state after redux dispatches its initial action', () => {
-      const wrapper = shallow(<App />);
+  const wrapper = shallow(<App />); // note to make issue of this
       expect(wrapper.find(ConnectedUsers)).to.have.length(1);
   });
 
