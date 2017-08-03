@@ -1,5 +1,6 @@
 export default function manageUsers(state = {
   users: [],
+  primaryUser: '',
 }, action){
   switch (action.type) {
 
