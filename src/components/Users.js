@@ -15,7 +15,7 @@ import { connect } from 'react-redux';
 }
 
 const mapStateToProps = (state) => { 
-  return { users: state.users };
+  return { users: state.users, primaryUser: state.users[0] };
 };
 
 export const ConnectedUsers = connect(mapStateToProps)(Users)
