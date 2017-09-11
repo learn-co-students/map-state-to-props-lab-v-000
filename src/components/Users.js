@@ -22,6 +22,6 @@ const mapStateToProps = (state) => {
   return { users: state.users, primaryUser: state.users[0] }
 }
 
-// Provide new prop 'Users' to 'App'
+// Provide new props 'users' and 'primaryUser' to 'Users' component
 export const ConnectedUsers = connect(mapStateToProps)(Users); // aren't we supposed to be connecting something around here?
 
