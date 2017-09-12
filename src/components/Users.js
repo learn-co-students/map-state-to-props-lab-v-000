@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+
 export class Users extends Component {
 
   render() {
@@ -8,12 +9,22 @@ export class Users extends Component {
     return (
       <div>
         <ul>
-          {/* stuff should happen around here */}
+          {this.props.users.map((user, i) => {
+            return (
+              <div key={i}>
+                <li>{user.userName}</li>
+                <li>{user.hometown}</li>
+              </div>
+            )
+          })}
         </ul>
       </div>
     )
   }
 }
 
-export const ConnectedUsers = Users // aren't we supposed to be connecting something around here?
+function mapStateToProps(state){
+  return {users: state.users, primaryUser: state.users[0]};
+}
 
+export const ConnectedUsers = connect(mapStateToProps)(Users); // aren't we supposed to be connecting something around here?

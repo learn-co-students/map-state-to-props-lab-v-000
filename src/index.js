@@ -7,14 +7,14 @@ import manageBand from './reducers/manageBand';
 
 // we wrap store in a function for testing purposes
 export const configureStore = () => {
-  return createStore(manageBand, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+  return createStore(manageBand)
 };
-
+ 
 let store = configureStore();
 
 ReactDOM.render(
   <Provider store={store}>
-    <App store={store}/>
+    <App store={store} />
   </Provider>,
   document.getElementById('root')
 );
