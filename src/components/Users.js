@@ -4,16 +4,23 @@ import { connect } from 'react-redux';
 export class Users extends Component {
 
   render() {
+    let people = this.props.users.map((user,index) => <li> Name: {user.userName} | Hometown: {user.hometown}</li>)
 
     return (
       <div>
         <ul>
-          {/* stuff should happen around here */}
+          {people}
         </ul>
       </div>
     )
   }
 }
 
-export const ConnectedUsers = Users // aren't we supposed to be connecting something around here?
+const mapStateToProps = (state) => {
+  return { users: state.users, primaryUser: state.users[0] }
+}
+
+export const ConnectedUsers = connect(mapStateToProps)(Users)
+
+
 
