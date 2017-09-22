@@ -5,9 +5,9 @@ class UserInput extends Component {
 
   constructor(props) {
     super(props);
-    
+
     this.state = {
-      userName: '', 
+      userName: '',
       hometown: ''
     };
   }
@@ -26,23 +26,23 @@ class UserInput extends Component {
 
   handleOnSubmit(event) {
     event.preventDefault();
-    
     this.props.store.dispatch(addUser(this.state))
+    this.setState({username: '', hometown: ''});  // not working
   }
 
   render() {
     return(
       <form onSubmit={(event) => this.handleOnSubmit(event)}>
       <p>
-        <input 
-          type="text" 
-          onChange={(event) => this.handleOnUserNameChange(event)} 
+        <input
+          type="text"
+          onChange={(event) => this.handleOnUserNameChange(event)}
           placeholder="user name"/>
       </p>
       <p>
-        <input 
-          type="text" 
-          onChange={(event) => this.handleOnHometownChange(event)} 
+        <input
+          type="text"
+          onChange={(event) => this.handleOnHometownChange(event)}
           placeholder="hometown"/>
       </p>
         <input type="submit" />
