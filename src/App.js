@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import UserInput from './components/UserInput'
+import { ConnectedUsers } from './components/Users'
+import { connect } from 'react-redux'
 
 export class App extends Component {
   render() {
@@ -7,6 +9,7 @@ export class App extends Component {
       <div className="App">
         <UserInput store={this.props.store}/>
         {/* is there something we could connect to here? */}
+        <ConnectedUsers store={this.props.store}/>
       </div>
     );
   }
