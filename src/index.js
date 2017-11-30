@@ -4,6 +4,7 @@ import App from './App';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import manageBand from './reducers/manageBand';
+// impaort ConnectedUsers from './components/Users.js'
 
 // we wrap store in a function for testing purposes
 export const configureStore = () => {
