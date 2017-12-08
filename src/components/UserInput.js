@@ -30,6 +30,7 @@ class UserInput extends Component {
     this.props.store.dispatch(addUser(this.state))
   }
 
+
   render() {
     return(
       <form onSubmit={(event) => this.handleOnSubmit(event)}>
