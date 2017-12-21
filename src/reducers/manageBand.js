@@ -4,6 +4,7 @@ export default function manageUsers(state = {
   switch (action.type) {
 
     case 'ADD_USER':
+      console.log(state)
       return Object.assign({}, state, {
         users: state.users.concat(action.user)
       });
