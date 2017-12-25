@@ -16,4 +16,3 @@ export class Users extends Component {
 }
 
 export const ConnectedUsers = Users // aren't we supposed to be connecting something around here?
-
