@@ -1,0 +1,154 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 0,
+    "pending": 0,
+    "failures": 5,
+    "start": "2018-01-17T00:18:29.173Z",
+    "end": "2018-01-17T00:18:29.281Z",
+    "duration": 108
+  },
+  "tests": [
+    {
+      "title": "returns the initial state after redux dispatches its initial action",
+      "fullTitle": "store returns the initial state after redux dispatches its initial action",
+      "duration": 2,
+      "currentRetry": 0,
+      "err": {
+        "stack": "Invariant Violation: Could not find \"store\" in either the context or props of \"Connect(App)\". Either wrap the root component in a <Provider>, or explicitly pass \"store\" as a prop to \"Connect(App)\".\n    at invariant (node_modules/invariant/invariant.js:42:15)\n    at new Connect (node_modules/react-redux/lib/components/connectAdvanced.js:134:33)\n    at node_modules/react-dom/lib/ReactCompositeComponent.js:292:18\n    at measureLifeCyclePerf (node_modules/react-dom/lib/ReactCompositeComponent.js:73:12)\n    at ShallowComponentWrapper._constructComponentWithoutOwner (node_modules/react-dom/lib/ReactCompositeComponent.js:291:16)\n    at ShallowComponentWrapper.mountComponent (node_modules/react-dom/lib/ReactCompositeComponent.js:185:21)\n    at Object.mountComponent (node_modules/react-dom/lib/ReactReconciler.js:43:35)\n    at ReactShallowRenderer._render (node_modules/react-dom/lib/ReactShallowRenderer.js:136:23)\n    at _batchedRender (node_modules/react-dom/lib/ReactShallowRenderer.js:83:12)\n    at Object.batchedUpdates (node_modules/react-dom/lib/ReactDefaultBatchingStrategy.js:58:14)\n    at Object.batchedUpdates (node_modules/react-dom/lib/ReactUpdates.js:95:27)\n    at ReactShallowRenderer.render (node_modules/react-dom/lib/ReactShallowRenderer.js:110:18)\n    at ReactShallowRenderer.render (node_modules/enzyme/build/react-compat.js:171:37)\n    at node_modules/enzyme/build/ShallowWrapper.js:128:26\n    at ReactDefaultBatchingStrategyTransaction.perform (node_modules/react-dom/lib/Transaction.js:141:20)\n    at Object.batchedUpdates (node_modules/react-dom/lib/ReactDefaultBatchingStrategy.js:60:26)\n    at Object.batchedUpdates (node_modules/react-dom/lib/ReactUpdates.js:95:27)\n    at ReactShallowRenderer.unstable_batchedUpdates (node_modules/react-dom/lib/ReactShallowRenderer.js:128:25)\n    at performBatchedUpdates (node_modules/enzyme/build/ShallowWrapper.js:103:21)\n    at node_modules/enzyme/build/ShallowWrapper.js:127:9\n    at withSetStateAllowed (node_modules/enzyme/build/Utils.js:284:3)\n    at new ShallowWrapper (node_modules/enzyme/build/ShallowWrapper.js:126:38)\n    at shallow (node_modules/enzyme/build/shallow.js:19:10)\n    at Context.<anonymous> (test/index-test.js:16:23)",
+        "message": "Could not find \"store\" in either the context or props of \"Connect(App)\". Either wrap the root component in a <Provider>, or explicitly pass \"store\" as a prop to \"Connect(App)\".",
+        "name": "Invariant Violation",
+        "framesToPop": 1
+      }
+    },
+    {
+      "title": "returns a state provided by the store",
+      "fullTitle": "store returns a state provided by the store",
+      "duration": 10,
+      "currentRetry": 0,
+      "err": {
+        "message": "expected undefined to deeply equal []",
+        "showDiff": true,
+        "expected": [],
+        "stack": "AssertionError: expected undefined to deeply equal []\n    at Assertion.assertEqual (node_modules/chai/lib/chai/core/assertions.js:485:19)\n    at Assertion.ctx.(anonymous function) [as equal] (node_modules/chai/lib/chai/utils/addMethod.js:41:25)\n    at Context.<anonymous> (test/index-test.js:29:48)"
+      }
+    },
+    {
+      "title": "updates the props as more users are added to the stores state",
+      "fullTitle": "store updates the props as more users are added to the stores state",
+      "duration": 4,
+      "currentRetry": 0,
+      "err": {
+        "message": "expected undefined to deeply equal [ { name: 'bob', hometown: 'philly' } ]",
+        "showDiff": true,
+        "expected": [
+          {
+            "name": "bob",
+            "hometown": "philly"
+          }
+        ],
+        "stack": "AssertionError: expected undefined to deeply equal [ { name: 'bob', hometown: 'philly' } ]\n    at Assertion.assertEqual (node_modules/chai/lib/chai/core/assertions.js:485:19)\n    at Assertion.ctx.(anonymous function) [as equal] (node_modules/chai/lib/chai/utils/addMethod.js:41:25)\n    at Context.<anonymous> (test/index-test.js:48:48)"
+      }
+    },
+    {
+      "title": "displays the users in the users component",
+      "fullTitle": "store displays the users in the users component",
+      "duration": 3,
+      "currentRetry": 0,
+      "err": {
+        "message": "expected '' to include 'bob'",
+        "showDiff": false,
+        "actual": "",
+        "stack": "AssertionError: expected '' to include 'bob'\n    at Context.<anonymous> (test/index-test.js:74:36)"
+      }
+    },
+    {
+      "title": "adds a prop called primary user to the users component which is the first user in the store",
+      "fullTitle": "store adds a prop called primary user to the users component which is the first user in the store",
+      "duration": 2,
+      "currentRetry": 0,
+      "err": {
+        "message": "expected undefined to deeply equal { name: 'bob', hometown: 'philly' }",
+        "showDiff": true,
+        "expected": {
+          "name": "bob",
+          "hometown": "philly"
+        },
+        "stack": "AssertionError: expected undefined to deeply equal { name: 'bob', hometown: 'philly' }\n    at Assertion.assertEqual (node_modules/chai/lib/chai/core/assertions.js:485:19)\n    at Assertion.ctx.(anonymous function) [as equal] (node_modules/chai/lib/chai/utils/addMethod.js:41:25)\n    at Context.<anonymous> (test/index-test.js:101:54)"
+      }
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "returns the initial state after redux dispatches its initial action",
+      "fullTitle": "store returns the initial state after redux dispatches its initial action",
+      "duration": 2,
+      "currentRetry": 0,
+      "err": {
+        "stack": "Invariant Violation: Could not find \"store\" in either the context or props of \"Connect(App)\". Either wrap the root component in a <Provider>, or explicitly pass \"store\" as a prop to \"Connect(App)\".\n    at invariant (node_modules/invariant/invariant.js:42:15)\n    at new Connect (node_modules/react-redux/lib/components/connectAdvanced.js:134:33)\n    at node_modules/react-dom/lib/ReactCompositeComponent.js:292:18\n    at measureLifeCyclePerf (node_modules/react-dom/lib/ReactCompositeComponent.js:73:12)\n    at ShallowComponentWrapper._constructComponentWithoutOwner (node_modules/react-dom/lib/ReactCompositeComponent.js:291:16)\n    at ShallowComponentWrapper.mountComponent (node_modules/react-dom/lib/ReactCompositeComponent.js:185:21)\n    at Object.mountComponent (node_modules/react-dom/lib/ReactReconciler.js:43:35)\n    at ReactShallowRenderer._render (node_modules/react-dom/lib/ReactShallowRenderer.js:136:23)\n    at _batchedRender (node_modules/react-dom/lib/ReactShallowRenderer.js:83:12)\n    at Object.batchedUpdates (node_modules/react-dom/lib/ReactDefaultBatchingStrategy.js:58:14)\n    at Object.batchedUpdates (node_modules/react-dom/lib/ReactUpdates.js:95:27)\n    at ReactShallowRenderer.render (node_modules/react-dom/lib/ReactShallowRenderer.js:110:18)\n    at ReactShallowRenderer.render (node_modules/enzyme/build/react-compat.js:171:37)\n    at node_modules/enzyme/build/ShallowWrapper.js:128:26\n    at ReactDefaultBatchingStrategyTransaction.perform (node_modules/react-dom/lib/Transaction.js:141:20)\n    at Object.batchedUpdates (node_modules/react-dom/lib/ReactDefaultBatchingStrategy.js:60:26)\n    at Object.batchedUpdates (node_modules/react-dom/lib/ReactUpdates.js:95:27)\n    at ReactShallowRenderer.unstable_batchedUpdates (node_modules/react-dom/lib/ReactShallowRenderer.js:128:25)\n    at performBatchedUpdates (node_modules/enzyme/build/ShallowWrapper.js:103:21)\n    at node_modules/enzyme/build/ShallowWrapper.js:127:9\n    at withSetStateAllowed (node_modules/enzyme/build/Utils.js:284:3)\n    at new ShallowWrapper (node_modules/enzyme/build/ShallowWrapper.js:126:38)\n    at shallow (node_modules/enzyme/build/shallow.js:19:10)\n    at Context.<anonymous> (test/index-test.js:16:23)",
+        "message": "Could not find \"store\" in either the context or props of \"Connect(App)\". Either wrap the root component in a <Provider>, or explicitly pass \"store\" as a prop to \"Connect(App)\".",
+        "name": "Invariant Violation",
+        "framesToPop": 1
+      }
+    },
+    {
+      "title": "returns a state provided by the store",
+      "fullTitle": "store returns a state provided by the store",
+      "duration": 10,
+      "currentRetry": 0,
+      "err": {
+        "message": "expected undefined to deeply equal []",
+        "showDiff": true,
+        "expected": [],
+        "stack": "AssertionError: expected undefined to deeply equal []\n    at Assertion.assertEqual (node_modules/chai/lib/chai/core/assertions.js:485:19)\n    at Assertion.ctx.(anonymous function) [as equal] (node_modules/chai/lib/chai/utils/addMethod.js:41:25)\n    at Context.<anonymous> (test/index-test.js:29:48)"
+      }
+    },
+    {
+      "title": "updates the props as more users are added to the stores state",
+      "fullTitle": "store updates the props as more users are added to the stores state",
+      "duration": 4,
+      "currentRetry": 0,
+      "err": {
+        "message": "expected undefined to deeply equal [ { name: 'bob', hometown: 'philly' } ]",
+        "showDiff": true,
+        "expected": [
+          {
+            "name": "bob",
+            "hometown": "philly"
+          }
+        ],
+        "stack": "AssertionError: expected undefined to deeply equal [ { name: 'bob', hometown: 'philly' } ]\n    at Assertion.assertEqual (node_modules/chai/lib/chai/core/assertions.js:485:19)\n    at Assertion.ctx.(anonymous function) [as equal] (node_modules/chai/lib/chai/utils/addMethod.js:41:25)\n    at Context.<anonymous> (test/index-test.js:48:48)"
+      }
+    },
+    {
+      "title": "displays the users in the users component",
+      "fullTitle": "store displays the users in the users component",
+      "duration": 3,
+      "currentRetry": 0,
+      "err": {
+        "message": "expected '' to include 'bob'",
+        "showDiff": false,
+        "actual": "",
+        "stack": "AssertionError: expected '' to include 'bob'\n    at Context.<anonymous> (test/index-test.js:74:36)"
+      }
+    },
+    {
+      "title": "adds a prop called primary user to the users component which is the first user in the store",
+      "fullTitle": "store adds a prop called primary user to the users component which is the first user in the store",
+      "duration": 2,
+      "currentRetry": 0,
+      "err": {
+        "message": "expected undefined to deeply equal { name: 'bob', hometown: 'philly' }",
+        "showDiff": true,
+        "expected": {
+          "name": "bob",
+          "hometown": "philly"
+        },
+        "stack": "AssertionError: expected undefined to deeply equal { name: 'bob', hometown: 'philly' }\n    at Assertion.assertEqual (node_modules/chai/lib/chai/core/assertions.js:485:19)\n    at Assertion.ctx.(anonymous function) [as equal] (node_modules/chai/lib/chai/utils/addMethod.js:41:25)\n    at Context.<anonymous> (test/index-test.js:101:54)"
+      }
+    }
+  ],
+  "passes": []
+}
