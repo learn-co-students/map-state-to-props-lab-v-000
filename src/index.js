@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {ConnectedApp} from './App';
+import App from './App';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import manageBand from './reducers/manageBand';
@@ -14,7 +14,7 @@ let store = configureStore();
 
 ReactDOM.render(
   <Provider store={store}>
-    <ConnectedApp store={store}/>
+    <App store={store}/>
   </Provider>,
   document.getElementById('root')
 );

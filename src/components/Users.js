@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 
 export class Users extends Component {
@@ -14,4 +15,12 @@ export class Users extends Component {
     )
   }
 }
-export default Users; // aren't we supposed to be connecting something around here?
+
+const mapStateToProps = (state) => {
+  return {
+    users: state.users,
+    primaryUser: state.users[0]
+  };
+};
+
+export const ConnectedUsers = connect(mapStateToProps)(Users)
