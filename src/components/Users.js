@@ -8,12 +8,20 @@ export class Users extends Component {
     return (
       <div>
         <ul>
-          {/* stuff should happen around here */}
+
+          {this.props.users.map((user, index)=> {
+            return <li key={index}>Username: {user.userName} Hometown: {user.hometown}</li>
+          })}
         </ul>
       </div>
     )
   }
 }
 
-export const ConnectedUsers = Users // aren't we supposed to be connecting something around here?
+const mapStateToProps = (state) => {
+  return {users: state.users,
+          primaryUser: state.users[0]}
+}
 
+
+export const ConnectedUsers = connect(mapStateToProps)(Users) // aren't we supposed to be connecting something around here?
