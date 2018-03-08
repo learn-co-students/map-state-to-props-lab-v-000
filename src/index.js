@@ -13,6 +13,7 @@ export const configureStore = () => {
 let store = configureStore();
 
 ReactDOM.render(
+
   <Provider store={store}>
     <App store={store}/>
   </Provider>,
