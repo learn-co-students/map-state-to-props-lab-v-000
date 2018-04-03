@@ -25,6 +25,7 @@ class UserInput extends Component {
   }
 
   handleOnSubmit(event) {
+  
     event.preventDefault();
     
     this.props.store.dispatch(addUser(this.state))
