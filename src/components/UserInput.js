@@ -1,54 +1,64 @@
 import React, { Component } from 'react';
-import { addUser } from '../actions/users';
+// import { addUser } from '../actions/users';
+import * as actions from '../actions/users';
+import { connect } from 'react-redux'
 
 class UserInput extends Component {
 
-  constructor(props) {
-    super(props);
-    
-    this.state = {
-      userName: '', 
-      hometown: ''
-    };
-  }
+	constructor(props) {
+		super(props);
 
-  handleOnUserNameChange(event) {
-    this.setState({
-      userName: event.target.value
-    });
-  }
+		this.state = {
+			userName: '',
+			hometown: ''
+		};
+	}
 
-  handleOnHometownChange(event) {
-    this.setState({
-      hometown: event.target.value
-    });
-  }
+	handleOnUserNameChange(event) {
+		this.setState({
+			userName: event.target.value
+		});
+	}
 
-  handleOnSubmit(event) {
-    event.preventDefault();
-    
-    this.props.store.dispatch(addUser(this.state))
-  }
+	handleOnHometownChange(event) {
+		this.setState({
+			hometown: event.target.value
+		});
+	}
 
-  render() {
-    return(
-      <form onSubmit={(event) => this.handleOnSubmit(event)}>
-      <p>
-        <input 
-          type="text" 
-          onChange={(event) => this.handleOnUserNameChange(event)} 
-          placeholder="user name"/>
-      </p>
-      <p>
-        <input 
-          type="text" 
-          onChange={(event) => this.handleOnHometownChange(event)} 
-          placeholder="hometown"/>
-      </p>
-        <input type="submit" />
-      </form>
-    )
-  }
+	handleOnSubmit(event) {
+		event.preventDefault();
+		let data = this.state
+		// this.props.store.dispatch(addUser(this.state))
+		this.props.onAddUser(data)
+	}
+
+	render() {
+		return (
+			<form onSubmit={(event) => this.handleOnSubmit(event)}>
+				<p>
+					<input
+						type="text"
+						onChange={(event) => this.handleOnUserNameChange(event)}
+						placeholder="user name" />
+				</p>
+				<p>
+					<input
+						type="text"
+						onChange={(event) => this.handleOnHometownChange(event)}
+						placeholder="hometown" />
+				</p>
+				<input type="submit" />
+			</form>
+		)
+	}
 }
 
-export default UserInput;
+const mapDispatchToProps = dispatch => {
+	return {
+		onAddUser: (data) => dispatch(actions.addUser(data))
+	}
+}
+
+// export default UserInput;
+export default connect(null, mapDispatchToProps)(UserInput);
