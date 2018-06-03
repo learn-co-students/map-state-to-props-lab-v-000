@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
 import UserInput from './components/UserInput'
+import {ConnectedUsers} from './components/Users'
 
 export class App extends Component {
+  
+  componentDidMount(){
+    return this.props.store.getState()
+  }
+
   render() {
     return (
       <div className="App">
         <UserInput store={this.props.store}/>
-        {/* is there something we could connect to here? */}
+        <ConnectedUsers store={this.props.store} />
       </div>
     );
   }
