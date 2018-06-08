@@ -16,11 +16,11 @@ export class Users extends Component {
   }
 }
 
-const ConnectedUsers = (state) => {
+const mapStateToProps = (state) => {
   return {
     users: state.users,
     primaryUser: state.users[0]
   };
 };
 
-export default connect(ConnectedUsers)(Users);
+export const ConnectedUsers = connect(mapStateToProps)(Users)
