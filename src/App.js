@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import UserInput from './components/UserInput'
-import ConnectedUsers from './components/Users'
+import {ConnectedUsers} from './components/Users'
 
 export class App extends Component {
   render() {
+    console.log(ConnectedUsers)
+    console.log(UserInput)
     return (
       <div className="App">
         <UserInput store={this.props.store}/>
-        <ConnectedUsers />
+        <ConnectedUsers/>
       </div>
     );
   }

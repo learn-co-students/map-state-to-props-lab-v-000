@@ -37,9 +37,9 @@ describe('store', () => {
       </Provider>
     );
     store.dispatch({
-      type: 'ADD_USER', 
+      type: 'ADD_USER',
       user: {
-        name: 'bob', 
+        name: 'bob',
         hometown: 'philly'
       }
     });
@@ -56,16 +56,16 @@ describe('store', () => {
       </Provider>
     );
     store.dispatch({
-      type: 'ADD_USER', 
+      type: 'ADD_USER',
       user: {
-        userName: 'bob', 
+        userName: 'bob',
         hometown: 'philly'
       }
     });
     store.dispatch({
-      type: 'ADD_USER', 
+      type: 'ADD_USER',
       user: {
-        userName: 'fred', 
+        userName: 'fred',
         hometown: 'pittsburgh'
       }
     });
@@ -83,16 +83,16 @@ describe('store', () => {
       </Provider>
     );
     store.dispatch({
-      type: 'ADD_USER', 
+      type: 'ADD_USER',
       user: {
-        name: 'bob', 
+        name: 'bob',
         hometown: 'philly'
       }
     });
     store.dispatch({
-      type: 'ADD_USER', 
+      type: 'ADD_USER',
       user: {
-        name: 'fred', 
+        name: 'fred',
         hometown: 'pittsburgh'
       }
     });

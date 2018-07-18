@@ -12,7 +12,6 @@ export class Users extends Component {
   }
 
   render() {
-    console.log(this.props.users, this.userList())
     return (
       <div>
         <ul>
@@ -24,8 +23,7 @@ export class Users extends Component {
 }
 
 function mapStateToProps(state){
-  return {users: state.users}
+  return {users: state.users, primaryUser: state.users[0]}
 }
 
-const ConnectedUsers = connect(mapStateToProps)(Users)
-export default ConnectedUsers
+export const ConnectedUsers = connect(mapStateToProps)(Users)
