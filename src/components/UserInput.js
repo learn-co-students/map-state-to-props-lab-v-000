@@ -1,54 +1,47 @@
 import React, { Component } from 'react';
 import { addUser } from '../actions/users';
 
-class UserInput extends Component {
-
+export default class UserInput extends Component {
   constructor(props) {
     super(props);
-    
     this.state = {
-      userName: '', 
+      userName: '',
       hometown: ''
     };
   }
 
-  handleOnUserNameChange(event) {
-    this.setState({
-      userName: event.target.value
-    });
+  handleOnChange(e) {
+    this.setState({[e.target.name]: e.target.value});
   }
 
-  handleOnHometownChange(event) {
-    this.setState({
-      hometown: event.target.value
-    });
-  }
-
-  handleOnSubmit(event) {
-    event.preventDefault();
-    
-    this.props.store.dispatch(addUser(this.state))
+  handleOnSubmit(e) {
+    e.preventDefault();
+    this.props.store.dispatch(addUser(this.state));
   }
 
   render() {
-    return(
-      <form onSubmit={(event) => this.handleOnSubmit(event)}>
+    return (
+      <form onSubmit={event => this.handleOnSubmit(event)}>
       <p>
-        <input 
-          type="text" 
-          onChange={(event) => this.handleOnUserNameChange(event)} 
-          placeholder="user name"/>
+        <input
+          type="text"
+          name="userName"
+          value={this.state.userName}
+          onChange={event => this.handleOnChange(event)}
+          placeholder="username"
+        />
       </p>
       <p>
-        <input 
-          type="text" 
-          onChange={(event) => this.handleOnHometownChange(event)} 
-          placeholder="hometown"/>
+        <input
+          type="text"
+          name="hometown"
+          value={this.state.hometown}
+          onChange={event => this.handleOnChange(event)}
+          placeholder="hometown"
+        />
       </p>
-        <input type="submit" />
+        <input type="submit"/>
       </form>
     )
   }
 }
-
-export default UserInput;
