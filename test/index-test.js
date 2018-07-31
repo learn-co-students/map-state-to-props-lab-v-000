@@ -16,10 +16,10 @@ describe('store', () => {
 
   let store = configureStore();
 
-  // it('returns the initial state after redux dispatches its initial action', () => {
-  //     const wrapper = shallow(<App />);
-  //     expect(wrapper.find(ConnectedUsers)).to.have.length(1);
-  // });
+  it('returns the initial state after redux dispatches its initial action', () => {
+      const wrapper = shallow(<App />);
+      expect(wrapper.find(ConnectedUsers)).to.have.length(1);
+  });
 
   it('returns a state provided by the store', () => {
     let store = configureStore()

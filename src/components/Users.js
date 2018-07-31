@@ -5,9 +5,9 @@ export class Users extends Component {
   render() {
     return (
       <ul>
-        {this.props.users.map( (user, index) =>
-          `<li key=${index}>${user.userName}: ${user.hometown}</li>`
-        ).join('')}
+        {this.props.users.map(
+          (user, index) => <li key={index}>{user.userName}: {user.hometown}</li>
+        )}
       </ul>
     );
   }
