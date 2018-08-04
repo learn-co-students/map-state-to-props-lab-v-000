@@ -1,47 +1,49 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
 
 class UserInput extends Component {
 
   state = {
     username: '',
-    hometown: ''
+    hometown: '',
   }
 
-  handleInputChange = (event) => {
+  handleChange(event) {
     this.setState({
-      [event.target.id]: event.target.value
+      [event.target.name]: event.target.value,
     });
   }
 
-  handleOnSubmit = (event) => {
+  handleOnSubmit(event) {
     event.preventDefault();
-    this.props.dispatch({type: 'ADD_USER', user: this.state})
+    this.props.addUser(this.state);
+    this.setState({
+      username: '',
+      hometown: ''
+    });
   }
 
   render() {
     return(
-      <form onSubmit={this.handleOnSubmit}>
-        <p>
+      <div>
+        <form onSubmit={(event) => this.handleOnSubmit(event)}>
           <input
             type="text"
-            id="username"
-            onChange={this.handleInputChange}
-            placeholder="username"
-          />
-        </p>
-        <p>
+            name="username"
+            value={this.state.username}
+            onChange={(event) => this.handleChange(event)}
+            placeholder="username" />
           <input
             type="text"
-            id="hometown"
-            onChange={this.handleInputChange}
-            placeholder="hometown"
-          />
-        </p>
-        <input type="submit" />
-      </form>
-    )
+            name="hometown"
+            value={this.state.hometown}
+            onChange={(event) => this.handleChange(event)}
+            placeholder="hometown" />
+          <input type="submit" />
+        </form>
+      </div>
+    );
   }
-}
 
-export default connect()(UserInput);
+};
+
+export default UserInput;
