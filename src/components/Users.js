@@ -1,18 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Users extends Component {
+const Users = props => {
+  const users = props.users.map((user, index) => {
+    return <li key={index}>{user.userName}</li>;
+  });
 
-  render() {
-    return (
-      <div>
-        <ul>
-          Users!
-        </ul>
-      </div>
-    )
-  }
-}
+  return (
+    <div>
+      {users}
+    </div>
+  );
 
-//add mapStateToProps here
+};
 
-export default Users
+export default Users;
