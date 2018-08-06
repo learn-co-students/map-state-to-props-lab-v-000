@@ -6,7 +6,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <UserInput />
+        <UserInput store={this.props.store}/>
         <ConnectedUsers />
       </div>
     );
