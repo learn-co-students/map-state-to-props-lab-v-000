@@ -6,7 +6,7 @@ export class Users extends Component {
     return (
       <ul>
         {this.props.users.map(
-          (user, index) => <li key={index}>{user.userName}: {user.hometown}</li>
+          (user, index) => <li key={index}>{user.username}: {user.hometown}</li>
         )}
       </ul>
     );
@@ -16,7 +16,7 @@ export class Users extends Component {
 const mapStateToProps = (state) => {
   return {
     users: state.users,
-    primaryUser: state.users[0]
+    userCount: state.users.count
   };
 };
 
