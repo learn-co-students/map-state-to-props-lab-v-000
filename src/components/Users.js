@@ -8,6 +8,7 @@ export class Users extends Component {
         {this.props.users.map(
           (user, index) => <li key={index}>{user.username}: {user.hometown}</li>
         )}
+        {this.props.userCount}
       </ul>
     );
   }
@@ -16,7 +17,7 @@ export class Users extends Component {
 const mapStateToProps = (state) => {
   return {
     users: state.users,
-    userCount: state.users.count
+    userCount: state.users.length
   };
 };
 
