@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 class Users extends Component {
 
@@ -6,13 +7,18 @@ class Users extends Component {
     return (
       <div>
         <ul>
-          Users!
+          {this.props.users.map((user, index) => {
+            return <li key={index}>{user.username} from {user.hometown}</li>
+          })}
         </ul>
+        <p>{this.props.users.length} users have been added!</p>
       </div>
     )
   }
 }
 
-//add mapStateToProps here
+const mapStateToProps = (state) => {
+  return { users: state.users }
+}
 
-export default Users
+export default connect(mapStateToProps)(Users);
