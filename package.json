@@ -23,7 +23,7 @@
     "webpack": "^3.6.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts start -a $IP -p $PORT",
     "build": "react-scripts build",
     "test": "mocha -R mocha-multi --reporter-options nyan=-,json=.results.json",
     "eject": "react-scripts eject"
