@@ -4,10 +4,15 @@ export default function manageUsers(state = {
   switch (action.type) {
     case 'ADD_USER':
       console.log('adding ', action.user);
-      return {
-        ...state,
+      return Object.assign({}, state, {
         users: [...state.users, action.user]
-      }
+      });
+      debugger
+
+      // return {
+      //   ...state,
+      //   users: [...state.users, action.user]
+      // }
 
     default:
       return state;
