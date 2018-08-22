@@ -44,4 +44,5 @@ class UserInput extends Component {
   }
 }
 
+// Not including a mapStatesToProps function only passes the dispatch prop
 export default connect()(UserInput);
