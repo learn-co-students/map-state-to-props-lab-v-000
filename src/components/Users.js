@@ -8,7 +8,7 @@ class Users extends Component {
 
     return (
       <div>
-        {this.props.numberOfUsers}
+        {this.props.numberofUsers}
         <ul>
           {users}
         </ul>
@@ -20,7 +20,7 @@ class Users extends Component {
 const mapStateToProps = (state) => {
   return {
     users: state.users,
-    numberOfUsers: state.users.length
+    numberofUsers: state.users.length
   };
 };
 
