@@ -3,7 +3,9 @@ export default function manageUsers(state = {
 }, action){
   switch (action.type) {
     case 'ADD_USER':
-      console.log('adding ', action.user);
+      console.log('adding ', action);
+      console.log(action.user.username)
+      console.log(action.user.hometown)
       return {
         ...state,
         users: [...state.users, action.user]

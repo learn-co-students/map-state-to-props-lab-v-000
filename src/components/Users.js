@@ -3,8 +3,8 @@ import { connect } from 'react-redux'
 class Users extends Component {
 
   showUser = () => {
-    return this.props.users.map( u => (
-      <li>{u.username}</li>
+    return this.props.users.map((user, idx)=> (
+      <li key={idx}>{user.username}</li>
     ))
   }
 
@@ -14,6 +14,7 @@ class Users extends Component {
         <ul>
           { this.showUser()}
           <br />
+
           Total: {this.props.userCount}
         </ul>
       </div>
