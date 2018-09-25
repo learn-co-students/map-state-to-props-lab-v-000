@@ -1,12 +1,19 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-class Users extends Component {
+
+ class Users extends Component {
 
   render() {
-    return (
+    const users = this.props.users.map((user, index) => {
+      return <li key={index}>{user.username}</li>
+    });
+    debugger
+      return (
       <div>
         <ul>
-          Users!
+          {this.props.numberOfUsers}
+          {users}
         </ul>
       </div>
     )
@@ -14,5 +21,13 @@ class Users extends Component {
 }
 
 //add mapStateToProps here
+const mapStateToProps = (state) => {
+  return {
+    users: state.users,
+    numberOfUsers: state.users.length
+  };
+};
 
-export default Users
+//export default Users
+//export const ConnectedUsers = connect(mapStateToProps)(Users)
+export default connect(mapStateToProps)(Users);
