@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
+import { addUser } from '../actions/users';
 
 class UserInput extends Component {
 
@@ -16,7 +17,8 @@ class UserInput extends Component {
 
   handleOnSubmit = (event) => {
     event.preventDefault();
-    this.props.dispatch({type: 'ADD_USER', user: this.state})
+    this.props.dispatch(addUser(this.state))
+    
   }
 
   render() {
