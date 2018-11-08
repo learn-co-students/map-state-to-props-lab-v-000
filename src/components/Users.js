@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { connect } from 'react-redux';
 class Users extends Component {
 
   render() {
@@ -14,5 +14,8 @@ class Users extends Component {
 }
 
 //add mapStateToProps here
+const mapStateToProps=(state)=>{
+  return {user: state.user}
+}
 
-export default Users
+export default connect(mapStateToProps)(Users)
