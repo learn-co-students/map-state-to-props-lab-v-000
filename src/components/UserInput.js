@@ -18,6 +18,8 @@ class UserInput extends Component {
     event.preventDefault();
     this.props.dispatch({type: 'ADD_USER', user: this.state})
   }
+//'This' objects don't persist in the browser console
+//Put debugger in the reducer or where you want
 
   render() {
     return(

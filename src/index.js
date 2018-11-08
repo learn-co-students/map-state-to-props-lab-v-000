@@ -11,7 +11,5 @@ const store = createStore(manageUsers);
 ReactDOM.render(
   <Provider store={store}>
     <App />
-  </Provider>
-  ,
-  document.getElementById('root')
+  </Provider> ,  document.getElementById('root')
 );
