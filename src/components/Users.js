@@ -9,7 +9,7 @@ class Users extends Component {
     return (
       <div>
         <ul>
-          Users:
+          <p> Users </p>
           {users}
           Total Users: {users.length}
         </ul>
