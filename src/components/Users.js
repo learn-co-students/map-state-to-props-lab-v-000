@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
 
 class Users extends Component {
 
@@ -14,5 +15,16 @@ class Users extends Component {
 }
 
 //add mapStateToProps here
+const mapStateToProps = (state) => {
+  // debugger;
+  return { users: state.users,
+  			count: state.users.length }
+}
 
-export default Users
+// export default Users
+export default connect(mapStateToProps)(Users);
+
+
+
+
+
