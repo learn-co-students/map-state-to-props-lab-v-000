@@ -23,9 +23,9 @@
     "webpack": "^3.6.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node node_modules/.bin/react-scripts start",
     "build": "react-scripts build",
-    "test": "mocha -R mocha-multi --reporter-options nyan=-,json=.results.json",
+    "learn": "node node_modules/.bin/mocha",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
