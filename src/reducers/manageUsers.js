@@ -1,6 +1,8 @@
-export default function manageUsers(state = {
+let initState = {
   users: [],
-}, action){
+};
+
+export default function manageUsers(state = initState, action){
   switch (action.type) {
     case 'ADD_USER':
       console.log('adding ', action.user);
