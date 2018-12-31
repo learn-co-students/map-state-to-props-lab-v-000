@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import UserInput from './components/UserInput'
 import ConnectedUsers from './components/Users'
+import { connect } from 'react-redux';
 
 class App extends Component {
+
+
   render() {
     return (
       <div className="App">
@@ -13,4 +16,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default connect( state => ({ items: state.items }) )(App);
