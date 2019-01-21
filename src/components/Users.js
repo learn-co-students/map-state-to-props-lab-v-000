@@ -16,6 +16,8 @@ class Users extends Component {
 }
 
 //add mapStateToProps here
+// here we are not manipulating state.....just defining props we want available to users component (connectedUsers), from state data
+// we only manipulate state in the reducer!! (manageUsers) in this case
 const mapStateToProps = (state) =>{
   return {users: state.users, numberOfUsers: state.users.length}
 }
