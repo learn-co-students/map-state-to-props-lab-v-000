@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
+import Users from './Users'
 
 class UserInput extends Component {
 
@@ -39,6 +40,7 @@ class UserInput extends Component {
           />
         </p>
         <input type="submit" />
+      
       </form>
     )
   }
