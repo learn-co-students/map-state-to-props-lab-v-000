@@ -19,6 +19,7 @@
     "react-redux": "^5.0.7",
     "react-scripts": "1.1.4",
     "redux": "^4.0.0",
+    "shortid": "^2.2.14",
     "sinon": "^6.1.4",
     "webpack": "^3.6.2"
   },
