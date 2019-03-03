@@ -3,17 +3,18 @@ import { connect } from 'react-redux'
 
 class Users extends Component {
 
-  function userName(user,index) {
-    var name = [user.username];
-    return name;
-  }
+//   userName(user,index) {
+    //var name = [user.username];
+  //  return name;
+//  this.props.users.map(user => user.username);
+//  }
 
   render() {
     return (
       <div>
         <ul>
-          <p>users:{this.props.users.map(userName)}</p>
-          <p>users count:{this.props.users.length}</p>
+          <p>users:{this.props.users.map(user => <li>username:{user.username}}</li>)}</p>
+          <p>users count:{this.props.numberOfUsers}</p>
         </ul>
       </div>
     )
@@ -21,7 +22,9 @@ class Users extends Component {
 }
 
 const mapStateToProps = (state) => {
-  return { users: state.users }
+  return { users: state.users,
+        numberOfUsers: state.users.length
+  };
 }
 
 
