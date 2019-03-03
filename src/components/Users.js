@@ -3,14 +3,16 @@ import { connect } from 'react-redux'
 
 class Users extends Component {
 
-
+  function userName(user,index) {
+    var name = [user.username];
+    return name;
+  }
 
   render() {
-    debugger
     return (
       <div>
         <ul>
-          <p>users:{this.props.users}</p>
+          <p>users:{this.props.users.map(userName)}</p>
           <p>users count:{this.props.users.length}</p>
         </ul>
       </div>
