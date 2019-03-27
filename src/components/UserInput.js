@@ -23,6 +23,8 @@ class UserInput extends Component {
            alert('All fields are required!')
          }
     else {
+            // * connect will return dispatch as a prop to
+            // * the component we're wrapping with connect
             this.props.dispatch({type: 'ADD_USER', user: this.state})
             this.setState({
               username: '',
