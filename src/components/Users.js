@@ -10,7 +10,8 @@ class Users extends Component {
     return (
       <div>
       	<br />
-      	<label>Users: </label> {this.props.userCount}
+      	<label>Users:cd ../
+      	 </label> {this.props.userCount}
         <ul>
           {users}
         </ul>
