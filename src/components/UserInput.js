@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 class UserInput extends Component {
@@ -11,12 +11,24 @@ class UserInput extends Component {
   handleInputChange = (event) => {
     this.setState({
       [event.target.id]: event.target.value
-    });
+    })
   }
 
   handleOnSubmit = (event) => {
-    event.preventDefault();
-    this.props.dispatch({type: 'ADD_USER', user: this.state})
+    event.preventDefault()
+
+    if (!this.state.username || 
+        !this.state.hometown
+       ) {
+           alert('All fields are required!')
+         }
+    else {
+            this.props.dispatch({type: 'ADD_USER', user: this.state})
+            this.setState({
+              username: '',
+              hometown: ''
+            })
+          }
   }
 
   render() {
@@ -26,6 +38,7 @@ class UserInput extends Component {
           <input
             type="text"
             id="username"
+            value={this.state.username}
             onChange={this.handleInputChange}
             placeholder="username"
           />
@@ -34,6 +47,7 @@ class UserInput extends Component {
           <input
             type="text"
             id="hometown"
+            value={this.state.hometown}
             onChange={this.handleInputChange}
             placeholder="hometown"
           />
@@ -44,4 +58,4 @@ class UserInput extends Component {
   }
 }
 
-export default connect()(UserInput);
+export default connect()(UserInput)

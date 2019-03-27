@@ -3,13 +3,20 @@ export default function manageUsers(state = {
 }, action){
   switch (action.type) {
     case 'ADD_USER':
-      console.log('adding ', action.user);
-      return {
-        ...state,
-        users: [...state.users, action.user]
+      console.log('adding ', action.user)
+      if (action.user.username) {
+        return {
+          ...state,
+          users: [...state.users, action.user]
+        }
       }
 
+      return state
+
     default:
-      return state;
+    
+      return state
   }
-};
+}
+
+
