@@ -6,7 +6,7 @@ class UserInput extends Component {
   state = {
     username: '',
     hometown: ''
-  }
+  };
 
   handleInputChange = (event) => {
     this.setState({
@@ -14,13 +14,13 @@ class UserInput extends Component {
     });
   }
 
-  handleOnSubmit = (event) => {
+  handleOnSubmit = event => {
     event.preventDefault();
     this.props.dispatch({type: 'ADD_USER', user: this.state})
   }
 
   render() {
-    return(
+    return (
       <form onSubmit={this.handleOnSubmit}>
         <p>
           <input
