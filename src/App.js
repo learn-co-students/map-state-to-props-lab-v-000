@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import UserInput from './components/UserInput'
 import ConnectedUsers from './components/Users'
 
@@ -9,8 +9,8 @@ class App extends Component {
         <UserInput />
         <ConnectedUsers />
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
