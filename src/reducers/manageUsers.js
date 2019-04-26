@@ -1,6 +1,3 @@
-this.props.dispatch({type: 'ADD_USER', user: this.state})
-
-
 export default function manageUsers(state = {
   users: [],
 }, action){
