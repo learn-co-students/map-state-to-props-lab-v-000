@@ -6,12 +6,22 @@ import manageUsers from './reducers/manageUsers'
 
 
 // add imports and code
+import { createStore } from 'redux'
+import {Provider} from 'react-redux'
+
+
+const store = createStore(
+  manageUsers,
+  window.__REDUX_DEVTOOLS_EXTENSION__&&window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 
 ReactDOM.render(
   // add imports and code
+  <Provider store={store}>
+    <div>
   <App />
-  // add imports and code
-  ,
+  </div>
+  </Provider>,
   document.getElementById('root')
 );
