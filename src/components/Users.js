@@ -11,9 +11,7 @@ class Users extends Component {
           Users!
           {this.props.userCount}
 
-          { this.props.users.map( (user, index) => (
-              <li key={index}>{user.username}</li>
-          ))}
+          { this.props.users.map( (user, index) => <li key={index}>{user.username}</li>)}
         </ul>
       </div>
     )
