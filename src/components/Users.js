@@ -6,10 +6,7 @@ class Users extends Component {
   render() {
     let users = this.props.users.map((user, index) => {
       return (
-        <ol>
-        <li key={index}>{user.hometown}</li>
-        <li>{user.username}</li>
-        </ol>
+        <li key={index}>{user.username}</li>
         )
       })
 
