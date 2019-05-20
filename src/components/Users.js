@@ -9,7 +9,7 @@ class Users extends Component {
       <div>
         <ul>
           Users!
-          { this.props.userCount > 0 ? <p>{this.props.userCount}</p> : <br /> }
+          {this.props.userCount}
 
           { this.props.users.map( (user, index) => (
               <li key={index}>{user.username}</li>
