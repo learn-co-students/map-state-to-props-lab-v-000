@@ -10,9 +10,6 @@ const store = createStore(manageUsers,
         window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
       );
 
-// add imports and code
-
-
 ReactDOM.render(
   // add imports and code
   <Provider store={store}>
