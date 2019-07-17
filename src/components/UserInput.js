@@ -8,6 +8,8 @@ class UserInput extends Component {
     hometown: ''
   }
 
+  
+
   handleInputChange = (event) => {
     this.setState({
       [event.target.id]: event.target.value
@@ -20,6 +22,8 @@ class UserInput extends Component {
   }
 
   render() {
+    
+
     return(
       <form onSubmit={this.handleOnSubmit}>
         <p>
