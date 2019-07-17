@@ -23,14 +23,6 @@ class UserInput extends Component {
 
   render() {
     
-    renderUsers = () => (
-      this.props.users.map(u => ( 
-        <li>
-          <h3>{u.username}</h3>
-          <h4>{u.hometown}</h4>
-        </li> 
-      ))
-    )
 
     return(
       <form onSubmit={this.handleOnSubmit}>
