@@ -4,11 +4,12 @@ import { connect } from 'react-redux';
 class Users extends Component {
 
   render() {
-    let user = this.state.users.map(user => {user.username})
+    debugger
+    let users = this.props.users.map((user, i) => <li key={i}>{user.username}</li>)
     return (
       <div>
         <ul>
-        {user}
+        {users}
           {this.props.userCount}
         </ul>
       </div>
@@ -24,4 +25,4 @@ const mapStateToProps = (state) => {
 }
 
 
-export default connect()(Users);
+export default connect(mapStateToProps)(Users);
