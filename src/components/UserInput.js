@@ -14,6 +14,8 @@ class UserInput extends Component {
     });
   }
 
+  /*Prevent the page from reloading,
+  and call this.props.dispatch() with a custom action*/
   handleOnSubmit = (event) => {
     event.preventDefault();
     this.props.dispatch({type: 'ADD_USER', user: this.state})
@@ -44,4 +46,7 @@ class UserInput extends Component {
   }
 }
 
+/* Wrapping a component in connect will, by default, pass one function to props: dispatch(). 
+This makes it possible for us to dispatch custom actions, as we see here in handleOnSubmit() extra functions.
+Using this.props.dispatch() like this is a handy way to allow any component to interact with the store. */
 export default connect()(UserInput);
