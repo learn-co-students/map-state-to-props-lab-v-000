@@ -7,9 +7,13 @@ class Users extends Component {
     return (
       <div>
         <ul>
-          {this.props.users.hometown}
-          {this.props.users.length}
+          {this.props.users.map((user) => (
+            <li key={user.id}>
+                {user.username}
+            </li>
+            ))}
         </ul>
+        {this.props.users.length}
       </div>
     )
   }
@@ -19,5 +23,6 @@ class Users extends Component {
 const mapStateToProps = (state) => {
   return { users : state.users}
 }
+
 export default connect(mapStateToProps)(Users);
 
