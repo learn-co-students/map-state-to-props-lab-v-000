@@ -9,12 +9,14 @@ class Users extends Component {
     <li >{user.username} - {user.hometown}</li>
     );
 
+    let total_users = this.props.users.length; 
+
     return (
       <div>
         <ul>
        {users_list}
         </ul>
-        <p>{this.props.users.username}</p>
+        <p>Total Users: {total_users}</p>
       </div>
     )
   }
