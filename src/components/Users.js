@@ -7,12 +7,13 @@ class Users extends Component {
   render() {
     //  used arrow function here.
     let users = this.props.users.map((user, index) => <li key={index}>{user.username}</li>
-      );
+    //  users here refers to the whole components 
+    );
     return (
       <div>
       {/* In addition, display the total number of users curently in the store */}
 
-        {this.props.numberOfUsers}
+        {this.props.numberOfUsers} 
         <ul>
           Users!
           {/* /* Write code here that displays the usernames of all users in the Redux store */}
