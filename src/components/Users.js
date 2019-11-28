@@ -11,8 +11,8 @@ class Users extends Component {
       <div>
         <ul>
           Users!
-          {}
-          {/* In addition, display the total number of users curently in the store */}
+          {this.props.users.username}
+          {this.props.users.length}
         </ul>
       </div>
     )
@@ -25,4 +25,4 @@ const mapStateToProps = (state) => {
 };
 
 // connect this component to Redux
-export default connect()(Users);
+export default connect(mapStateToProps)(Users);
