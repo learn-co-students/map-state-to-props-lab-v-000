@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import Provider from 'redux';
-
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 import manageUsers from './reducers/manageUsers'
+import App from './App';
 
 
 let store = createStore(manageUsers);
