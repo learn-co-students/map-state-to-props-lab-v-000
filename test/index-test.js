@@ -50,6 +50,7 @@ describe('the application', () => {
         <App />
       </Provider>
     );
+    //debugger 
     expect(wrapper.find(Users).find('li').length).to.equal(0);
   });
 
