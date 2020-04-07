@@ -1,5 +1,9 @@
 # Mapping State to Props Using React and Redux
 
+## Cool Graphics
+Here is an illustration of this lab with notes from the two previous labs incorporated into it so you can see what is going on.  The blue colored methods are React methods whereas the purple ones are methods in the Redux library.  A finalized color schems will be developed in a future symbol legend on my final portfolio project.
+<a href="https://imgur.com/XtMaRiX"><img src="https://i.imgur.com/XtMaRiX.jpg" title="source: imgur.com" /></a>
+
 ## Objectives
 
 - Use the **React Redux** library to connect the store to the **React**
