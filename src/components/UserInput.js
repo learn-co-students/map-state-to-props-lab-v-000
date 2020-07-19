@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 
 class UserInput extends Component {
 
@@ -42,6 +42,7 @@ class UserInput extends Component {
       </form>
     )
   }
+
 }
 
 export default connect()(UserInput);
