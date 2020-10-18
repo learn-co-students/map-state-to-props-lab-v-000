@@ -4,13 +4,19 @@ import App from './App'
 
 import manageUsers from './reducers/manageUsers'
 
-
+import {createStore} from 'redux'
+import { Provider } from 'react-redux'
 // add imports and code
 
+export const store = createStore(manageUsers, 
+  window.__REDUX_DEVTOOLS_EXTENSION && window.__REDUX_DEVTOOLS_EXTENSION__()) 
 
 ReactDOM.render(
   // add imports and code
-  <App />
+  <Provider store={store}>
+    <App />
+  </Provider>
+  
   // add imports and code
   ,
   document.getElementById('root')
