@@ -8,11 +8,13 @@ class UserInput extends Component {
     hometown: ''
   }
 
+
   handleInputChange = (event) => {
     this.setState({
       [event.target.id]: event.target.value
     });
   }
+
 
   handleOnSubmit = (event) => {
     event.preventDefault();
