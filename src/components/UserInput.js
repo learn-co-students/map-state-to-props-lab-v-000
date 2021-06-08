@@ -45,3 +45,6 @@ class UserInput extends Component {
 }
 
 export default connect()(UserInput);
+// Wrapping a component in connect as we see above will, by default, 
+// pass one function to props: dispatch(). This makes it possible for us to dispatch custom actions,
+//  as we see here in handleOnSubmit().
